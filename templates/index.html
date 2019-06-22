@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Маршрутизация Vue.js</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <router-view></router-view>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script>
+// компоненты, которые обрабатывают пути
+const NotFound = { template: '<h2>Page Not Found</h2>' }
+const Home = { template: '<h2>Home Page</h2>' }
+const About = { template: '<h2>About Page</h2>' }
+ 
+// маршруты, сопотавленные с компонентами
+const routes = [
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+  { path: '*', component: NotFound }
+];
+// создаем объект маршрутизатора
+const router = new VueRouter({
+    mode: 'history',
+    routes: routes
+});
+ 
+new Vue({
+  el: '#app',
+  router: router
+})
+</script>
+</body>
+</html>
