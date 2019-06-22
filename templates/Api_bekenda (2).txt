@@ -1,0 +1,23 @@
+1)получить список водителей;
+	принимает: урл /drivers
+	отдаёт: json {"id", "name", "age", "experience","sex"}
+2)получить список машин;
+	принимает: урл /cars
+	отдаёт: json {"id", "name", "age", "deter","plate"}
+3) Time
+
+4) [driver + track + time][current time]
+
+[driver + track + time][current time?]
+
+
+
+3)создать/изменить водителя;
+	принимает: /create_driver json {"id", "name", "age", "experience"}
+	отдаёт: json {"successfull": true/false}
+4)создать/изменить машину;
+	принимает: /create_track json {"id", "name", "age", "condition"}
+	отдаёт: json {"successfull": true/false}
+5)посчитать;
+	принимает: /count json {"from", "to", "driver", "track", "cargo"}
+	отдаёт: json {"initTime", "driverTime", "trackTime", "fullTime"}
