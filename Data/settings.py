@@ -1,6 +1,7 @@
 
 DRIVERS = 'drivers'
-TRACKS = 'tracks'
+TRUCKS = 'trucks'
+ROUTES = 'RF'
 # PERSON_TABLE = 'person_data'
 
 
